@@ -10,14 +10,7 @@ This Projects focuses on building a cloud based SOC enviroment utilisng Microsof
 - Microsoft Defender XDR (Extended Detection & Response)
 - Microsoft Defender for Endpoint
 
-# Progress Summary 
+# Table of Contents
 
-| Day | Activity | Key Insight |
-|-----|----------|-------------|
-| 1 |  |  |
-| 2 |  |  |
-| 3 |  |  |
-| 4 |  |  |
-| 5 |  |  |
-| 6 |  |  |
-| 7 |  |  |
+- [Mini-SOC Projects](https://github.com/RiazSamir/30-Day-Microsoft-Challenge-/tree/main/Mini-Projects)
+- [Daily Notes](https://github.com/RiazSamir/30-Day-Microsoft-Challenge-/blob/main/Daily-Notes/README.md)
