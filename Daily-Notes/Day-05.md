@@ -4,7 +4,7 @@
 - Create a dashboard to support investigations and triage of authentication Activity
 
 
-## Platofrm / Tools:
+## Platform / Tools:
 - Microsoft Sentinel
 - Sentinel Workbooks
 - Kusto Query Language
@@ -16,7 +16,7 @@
 - Created a Sentinel workbook to visualise failed authentication activity (*Figure 3*)
 
 ## SOC Importance
-- Visualising failed logon attemps help identify brute force or credential misuse attemps
+- Visualising failed logon attempts helps identify brute force or credential misuse attempts
 - Workbooks supports faster triage without repeatedly running manual queries. 
 
 
@@ -31,9 +31,9 @@
 <p align="center">
   <img width="403" height="769" alt="image" src="https://github.com/user-attachments/assets/12b00e34-2375-4f7e-8c76-e41b72b56a26" />
 </p>
-<p align="center"><b>Figure 2: KQL Query to summarize failed logon attempts in a decending order. </b></p>
+<p align="center"><b>Figure 2: KQL Query to summarise failed logon attempts in a descending order. </b></p>
 
 <p align="center">
   <img width="1518" height="836" alt="image" src="https://github.com/user-attachments/assets/aaae55b1-1f42-4271-8dbc-7812df6118fe" />
 </p>
-<p align="center"><b>Figure 3: Newly created Dashboard which summarizes the top failed logon attemps ina decending order </b></p
+<p align="center"><b>Figure 3: Newly created Dashboard which summarises the top failed logon attempts in a descending order </b></p
