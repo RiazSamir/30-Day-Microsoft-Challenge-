@@ -1,8 +1,8 @@
 # Day 07 – Brute Force Investigation Report
 
 ## Objective:
-- Investigate a "multiple Failed Logons" alert created via day 06
-- Determine affected accounts/hosts and indentify and successful logons
+- Investigate a "multiple Failed Logons" alert created on day 06
+- Determine affected accounts/hosts and identify successful logons
 - Provide Recommendations as if this were a client Incident
 
 ## Platform / Tools:
@@ -38,7 +38,7 @@
 ### Recommendations:
 - Treat impacted local admin accounts as potentially compromised until verified
 - Reset passwords and review authentication activity for those accounts
-- Implement account lockout / password policy controls where appropriate
+- Implement account lockout/password policy controls where appropriate
 - Restrict remote use of local accounts (prefer privileged domain accounts / PIM where applicable)
 - If available, ingest richer telemetry (source IP, logon type) to improve triage accuracy
 
