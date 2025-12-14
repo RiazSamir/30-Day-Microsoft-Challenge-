@@ -10,6 +10,7 @@
 - Azure Activity Logs
 - Log Analytics Workspace
 - Kusto Query Language (KQL)
+- Sentinel Content Hub
 
 ## Actions Performed 
 - Exported Azure Actvity Logs to our Log Analytics Workspace so that Sentinel would be able to Query the Logs (*Figure 1*)
