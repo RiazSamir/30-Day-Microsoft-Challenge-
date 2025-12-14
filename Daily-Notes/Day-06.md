@@ -18,6 +18,12 @@
 - Automatic Incident Creation if our rule was triggered (*Figure 5*)
 - Verified our Rule works by going to the incident Section of Sentinel (*Figure 6*)
 
+## SOC Importance
+
+- Defender XDR provides rich entity context (users, devices, processes) and generates attack stories
+- Intergrating Defender XDR with Sentinel allows Incidents to include correlated entities rather than just isolated logs.
+- Analytics rules based on XDR-enriched data improve alert quality and investigation efficiency
+- Understanding the difference between raw log detections and XDR-based detections is critical for SOC triage and response
 
 
 
