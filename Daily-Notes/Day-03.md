@@ -18,7 +18,7 @@
 - Sentinel is designed for modern security operations centres that need to scale, move faster, and make decisions based on real insights. It provides:
   - A unified view across your users, devices, applications, and infrastructure.
   - Built in analytics and threat intelligence to surface real threats.
-	- Automation tools to reduce manual work and speed up incident response. It does this using Playbooks.
+  - Automation tools to reduce manual work and speed up incident response. It does this using Playbooks.
   - Full visibility across both Microsoft and non-Microsoft environments.
 
 
