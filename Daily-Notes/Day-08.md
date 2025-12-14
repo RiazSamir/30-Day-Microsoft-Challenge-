@@ -1,8 +1,8 @@
 # Day 08 - Threat Hunting with Sentinel Bookmarks
 
 ## Objective:
-- Use Sentinel bokmakrs to capture investigation evidence
-- Convert notable hunting finding into a manual incident
+- Use Sentinel bookmarks to capture investigation evidence
+- Convert a notable hunting finding into a manual incident
 
 ## Platform / Tools:
 - Microsoft Sentinel
@@ -13,7 +13,7 @@
 ## Actions Performed
 - Queried Office 365 audit activity using the OfficeActivity_CL table
 - Reviewed Operations found in OfficeActivity_CL (*Figure 1*)
-- Reviewed the "FileAccessed" operation to locate any suspicious IPs which we did find. A SharePoint file access event was observed originating from an
+- Reviewed the "FileAccessed" operation to locate any suspicious IPs, which we did find. A SharePoint file access event was observed originating from an
 unseen external IP address, differing from the user’s normal access pattern. This activity was bookmarked for further investigation (*Figure 2 - 3*)
 - Navigated to "Hunting" on Sentinel to create a Manuel Incident from our Bookmark created (*Figure 4 - 5*)
 
@@ -27,7 +27,7 @@ unseen external IP address, differing from the user’s normal access pattern. T
 <p align="center">
   <img width="546" height="833" alt="image" src="https://github.com/user-attachments/assets/559fa37a-882b-46d0-9fc5-eb0beebcf17f" />
 </p>
-<p align="center"><b>Figure 1: Review of the different Operations availble to us in the OfficeActivity_CL table </b></p>
+<p align="center"><b>Figure 1: Review of the different Operations available to us in the OfficeActivity_CL table </b></p>
 
 
 <p align="center">
