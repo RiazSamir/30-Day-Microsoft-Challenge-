@@ -13,14 +13,14 @@
 - Sentinel Content Hub
 
 ## Actions Performed 
-- Exported Azure Actvity Logs to our Log Analytics Workspace so that Sentinel would be able to Query the Logs (*Figure 1*)
-- Downloaded Azure Activity via Content Hub as Data Connectors are required to get data oboarded onto Sentinel (*Figure 2*)
+- Exported Azure Activity Logs to our Log Analytics Workspace so that Sentinel would be able to query the Logs (*Figure 1*)
+- Downloaded Azure Activity via Content Hub as Data Connectors are required to get data onboarded onto Sentinel (*Figure 2*)
 - Downloaded Sentinel Training via Azure Portal so that we can start querying sample logs via KQL (*Figure 3*)
 
 ## SOC Relevance
 - Azure Activity logs provide visibility into subscription-level administrative actions
 -  Validating data ingestion ensures reliable telemetry before detection rule creation
-- Practicing KQL enables effective investigation and threat hunting in Sentinel  
+- Practising KQL enables effective investigation and threat hunting in Sentinel  
 
 
 ## Screenshots
