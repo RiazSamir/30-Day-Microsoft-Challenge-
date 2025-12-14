@@ -16,7 +16,12 @@
   - Preset Security Policies are essential to help your organisation have a good security posture with Microsoft's recommended Security Controls and Settings
 - Reviewed the Configuration Analyser, which is used to identify our current policy configuration to improve our Security Posture. 
 
-
+## SOC Relevance
+- Email remains the primary initial Access for real-world Attacks
+- Defender for Office 365 provides a Layered protection against phishing, malware, and impersonation
+- Preset and Custom policies help enforce consistent security controls across the tenant
+- Configuration Analyser highlights misconfigurations that increase risk
+- These controls directly support phishing detection, Threat Hunting, and Incident response workflows. 
 
 
 ## Screenshots 
