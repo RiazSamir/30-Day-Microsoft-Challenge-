@@ -30,4 +30,3 @@ Each daily entry captures:
 - **Tools / Platform** – Microsoft services used that day
 - **Actions Performed** – Key configuration or investigative steps
 - **SOC Relevance** – Why the activity matters in a real SOC
-- **Outcome** – Result or capability achieved
