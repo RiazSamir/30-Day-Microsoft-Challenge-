@@ -83,34 +83,34 @@ Based on the evidence presented, the email appears to be benign; however, monito
 <p align="center">
   <img width="1414" height="577" alt="image" src="https://github.com/user-attachments/assets/55da3a8e-868f-452f-b67b-fb7469b230e5" />
 </p>
-<p align="center"><b>*Figure 2: VirusTotal results for hxxps://example.com indicating no confirmed malicious activity at the time of analysis.*</b></p>
+<p align="center"><b>Figure 2: VirusTotal results for hxxps://example.com indicating no confirmed malicious activity at the time of analysis.</b></p>
 
 
 <p align="center">
   <img width="698" height="287" alt="image" src="https://github.com/user-attachments/assets/fa239de4-2dcf-446a-a514-c669da472f1b" />
 </p>
-<p align="center"><b>*Figure 3: VirusTotal community feedback describing hxxps://example.com as a benign example domain.*</b></p>
+<p align="center"><b>Figure 3: VirusTotal community feedback describing hxxps://example.com as a benign example domain.</b></p>
 
 <p align="center">
   <img width="1104" height="359" alt="image" src="https://github.com/user-attachments/assets/2450d8c1-5652-4f7b-a0fc-a9668eded31e" />
 </p>
-<p align="center"><b>*Figure 4: KQL Query for people who have clicked on the link hxxps://example.com*</b></p>
+<p align="center"><b>Figure 4: KQL Query for people who have clicked on the link hxxps://example.com</b></p>
 
 <p align="center">
   <img width="1515" height="305" alt="image" src="https://github.com/user-attachments/assets/51b76b2e-894c-48e7-b8cd-4f131e5927ed" />
 </p>
-<p align="center"><b>*Figure 5: KQL Query for people who else may have received the email with the Subject "Banking Details URGENT".*</b></p>
+<p align="center"><b>Figure 5: KQL Query for people who else may have received the email with the Subject "Banking Details URGENT".</b></p>
 
 
 <p align="center">
   <img width="618" height="496" alt="image" src="https://github.com/user-attachments/assets/422c7d07-40e7-40a1-839e-382685377908" />
 </p>
-<p align="center"><b>*Figure 6: IPDBAbuse for the senders IP Address x[.]x[.]x[.]x*</b></p>
+<p align="center"><b>Figure 6: IPDBAbuse for the senders IP Address x[.]x[.]x[.]x</b></p>
 
 
 <p align="center">
   <img width="1243" height="124" alt="image" src="https://github.com/user-attachments/assets/3898f176-5b8b-49a0-9582-63995e62ab4b" />
 </p>
-<p align="center"><b>*Figure 7: Latest report on the Sender IP Address x[.]x[.]x[.]x flagging it for Phishing and Email Spam *</b></p>
+<p align="center"><b>Figure 7: Latest report on the Sender IP Address x[.]x[.]x[.]x flagging it for Phishing and Email Spam</b></p>
 
 
