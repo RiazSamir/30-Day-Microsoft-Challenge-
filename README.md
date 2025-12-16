@@ -9,6 +9,7 @@ This Projects focuses on building a cloud based SOC enviroment utilisng Microsof
 - Microsoft Sentinel
 - Microsoft Defender XDR (Extended Detection & Response)
 - Microsoft Defender for Endpoint
+- Intune
 
 # Table of Contents
 
