@@ -32,7 +32,8 @@
 ## Screenshots
 
 <p align="center">
-  <img width="1488" height="681" alt="image" src="https://github.com/user-attachments/assets/dea2253c-f130-437b-98a6-1f1cd0db277d" />
+  <img width="1488" height="681" alt="image" src="https://github.com/user-attachments/assets/7477b3be-f885-4523-b601-df04e7412aa9" />
+
 </p>
 <p align="center"><b>Figure 1:Intune device Enrollment Options</b></p>
 
@@ -43,7 +44,8 @@
 <p align="center"><b>Figure 2: Joining a Windows 11 device to Microsoft Entra ID via “Access work or school”</b></p>
 
 <p align="center">
-  <img width="1007" height="788" alt="image" src="https://github.com/user-attachments/assets/42e28dda-927e-4751-8c6a-717f9757d218" />
+  <img width="1201" height="208" alt="image" src="https://github.com/user-attachments/assets/f9de6d64-6b95-4fa6-9ead-09183239c6ac" />
+
 </p>
 <p align="center"><b>Figure 3: Device showing successful enrollment to Intune</b></p>
 
