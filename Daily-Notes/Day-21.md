@@ -30,7 +30,7 @@
   - `Situational hunting`
     - Focuses on high-risk assets, users, or applications
     - Prioritises hunts based on business impact
-- Defined the characteristics of a good hunting hypothesis:
+- Defined the characteristics of creating a good hunting hypothesis:
   - `Relevant` – applies to the specific environment and data sources
   - `Specific` – clearly defines attacker behaviour being investigated
   - `Answerable` – supported by available telemetry to confirm or disprove
