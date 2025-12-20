@@ -27,6 +27,11 @@
 - Analysed the alerts for the registry run keys being created with the set value data being calc.exe (*Figure 5*)
 - AS a way to pivot from this alert, navigated to `See in device timeline` to see the event that had occurred prior to the alert generating (*Figure 6*)
 
+## SOC Relevance
+- Atomic Red Team allows SOC analysts to safely test detection coverage using real MITRE ATT&CK techniques
+- Helps validate whether Defender for Endpoint is correctly detecting persistence, execution, and post-compromise behaviour
+- Understanding Device Timeline is critical for reconstructing attack chains during investigations
+- Practising alert analysis improves triage skills and prioritisation decisions
 
 
 ## Screenshots
