@@ -1,3 +1,14 @@
+# Endpoint Attack Simulation Report 
+
+## Overview
+- An alert was generated in Microsoft Defender XDR as a result of intentional adversary simulation using Atomic Red Team. The activity was conducted in a controlled lab environment for testing and validation of detection capabilities. Atomic Red Team simulates real-world attacker techniques, which caused Defender for Endpoint to generate alerts related to suspicious PowerShell command-line activity
+
+---
+
+
+# Report
+
+
 ## Findings 
 
 Commands Executed:
@@ -14,7 +25,7 @@ Files found:
 	
 ## Investigation Summary 
 
-On `2025-12-19 00:24:51 UTC`, Defender XDR had created an Incident on "Suspicious PowerShell Command Line". John Doe executed a PowerShell command which establishes RunOnce persistence that triggers PowerShell to download and execute a remote script in memory, simulating fileless post-exploitation activity (*Figure 1). Furthermore, on `2025-12-19 00:24:57 UTC`, another command was executed, creating a registry Run Key that launches hidden PowerShell with execution policy bypass at every logon (*Figure 2*). At the exact same time, it was observed that COM hijacking had taken place by modifying the Recycle Bin CLSID open command so that calc.exe  runs when an Object is invoked. So when Recycle Bin is opened, calc.exe is executed. Though unknown what are the capabilities of calc.exe are, it is likely that this is establishing persistence based on its stored location (*Figure 3*). Based on the available evidence, there was no further observed activity from John Doe. When scoping to see if other accounts were seen executing PowerShell commands, based on the evidence seen on *Figure 4*, it shows that at the time of investigation, there were no observed activities. However, due to how recent this is, this is subject to change. 
+On `2025-12-19 00:24:51 UTC`, Defender XDR had created an Incident on "Suspicious PowerShell Command Line". John Doe had executed multiple PowerShell commands. One of which establishes RunOnce persistence that triggers PowerShell to download and execute a remote script in memory, simulating fileless post-exploitation activity (*Figure 1). Furthermore, on `2025-12-19 00:24:57 UTC`, another PowerShell command was executed, creating a registry Run Key that launches hidden PowerShell with execution policy bypass at every logon (*Figure 2*). At the exact same time, it was observed that COM hijacking had taken place by modifying the Recycle Bin CLSID open command so that calc.exe  runs when an Object is invoked. So when Recycle Bin is opened, calc.exe is executed. Though unknown what the capabilities of calc.exe are, this is likely establishing persistence based on its stored location (*Figure 3*). Based on the available evidence, there was no further observed activity from John Doe. When scoping to see if other accounts were seen executing PowerShell commands, based on the evidence seen on *Figure 4*, it shows that at the time of investigation, there were no observed activities. However, due to how recent this is, this is subject to change. 
 
 
 
@@ -24,7 +35,7 @@ On `2025-12-19 00:24:51 UTC`, Defender XDR had created an Incident on "Suspiciou
 Who - Who was involved? 
 - User: John Doe
 - Host: soc-project-samir-vm-01
-- No other user accounts were observed executing PowerShell or related suspicious activity at the time of investigation.
+- No other user accounts were observed executing PowerShell or related suspicious activity at the time of investigation (*Figure 4*)
 		 
 
 What - What happened? 
@@ -52,10 +63,10 @@ Where - Where in the environment did this happen?
 					
 			
 How - How did this happen?
-- Powershell was used to:
-- Download and execute remote script in memory
+- PowerShell was used to:
+- Download and execute the remote script in memory
 - Modify Registry RunOnce and Run Keys to maintain persistence
-- Reg.exe was used to Hijack a COM object (recycle Bin CLSIC) to executed calc.exe
+- Reg.exe was used to hijack a COM object (Recycle Bin CLSID) to execute calc.exe
 	
 	
 ## Recommendations: 
