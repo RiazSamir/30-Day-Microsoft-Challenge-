@@ -27,7 +27,7 @@ A user received a phishing email containing a typosquatted DocuSign link, entere
 
 ## Investigation Summary 
 
-On 2025-12-25 17:30 PM (UTC), an Incident was created for an Anonymous IP involving one user. A successful sign-in had been made from the IP address x[.]x[.]x[.]x on 2025-12-25 17:33 PM (UTC), into the user's (John Doe) Outlook Web (Figure 1). On 2025-12-25 17:20 PM (UTC), a Suspicious Invoice Email was sent to John Doe from the Gmail Address **abc@gmail.com** claiming that their "invoice is ready for viewing". This Email did have a URL attached (D0cusign[.]com) which the user had clicked on 2025-12-25 17:23 PM (UTC). Using URL2PNG for this link showed a login page, which is likely a credential harvester (Figure 2). Due to the structure of the URL in the email, typosquatting is occurring, meaning this Gmail address is imitating the legit site docusign.com and getting people to click on the link to login and possibly steal credentials. Based on the available evidence, a **30-day advanced hunting email search** showed that only John Doe received this email. (Figure 3). 
+On 2025-12-25 17:30 PM (UTC), an Incident was created for an Anonymous IP involving one user. A successful sign-in had been made from the IP address x[.]x[.]x[.]x on 2025-12-25 17:33 PM (UTC), into the user's (John Doe) Outlook Web (Figure 1). On 2025-12-25 17:20 PM (UTC), a Suspicious Invoice Email was sent to John Doe from the Gmail Address **abc@gmail.com** claiming that their "invoice is ready for viewing". This Email did have a URL attached (D0cusign[.]com) which the user had clicked on 2025-12-25 17:23 PM (UTC). Using URL2PNG for this link showed a login page, which is likely a credential harvester (Figure 2). Due to the structure of the URL in the email, typosquatting is occurring, meaning this Gmail address is imitating the legit site docusign.com and getting people to click on the link to login and possibly steal credentials. Based on the available evidence, a **30-day advanced hunting email search** showed that only John Doe received this email. (Figure 3). Furthermore, looking up this IP address on Abuse IPDB, this IP was reported 12 time with an abuse confidence of 0%. This IP Address was last reported 2 months ago for port scanning as well as brute forcing (Figure 6)
 
 On 2025-12-25 18:57 PM (UTC), an incident had been generated on Defender XDR for Credential Access on one Endpoint. The affected asset (soc-project-samir-vm-01) had executed Mimikatz.exe via PowerShell. This was done by the user John Doe. Mimikatz is a malicious program which is known for credential dumping. On 2025-12-25 18:56 PM - 2025-12-25 19:00 PM (UTC), the following commands were executed: 
 
@@ -97,11 +97,12 @@ which are both used to steal credentials as well as Kerberos tickets using mimik
 - Immediately **reset credentials** for John Doe
 - Reset any accounts sharing the same password
 - **Revoke all active sessions** associated with compromised accounts
+- The IP Address (x[.]x[.]x[.]x) associated should also be blocked, given that we have no business occurring in Canada.
 - Require re-authentication with **new credentials**
 - **Enforce MFA** on affected accounts if not already enabled
 - **Isolate endpoint `soc-project-samir-vm-01`** from the network
 - Perform full malware containment via **Microsoft Defender for Endpoint**
-- Review additional lateral movement indicators
+- Review additional lateral movement indicators. This can be done by viewing Windows event logs 4624/4625 with the Logon type being 3 or 10.
 
 
 ## Screenshots
@@ -133,4 +134,10 @@ which are both used to steal credentials as well as Kerberos tickets using mimik
 <p align="center">
   <img width="1158" height="321" alt="image" src="https://github.com/user-attachments/assets/46fc700e-d411-42cc-9dbc-232262980ef9" />
 </p>
-<p align="center"><b>Figure 4:No evidence of lateral movement detected — no RemoteInteractive or Network logon types observed on other devices during the investigation timeframe</b></p>
+<p align="center"><b>Figure 5: No evidence of lateral movement detected — no RemoteInteractive or Network logon types observed on other devices during the investigation timeframe</b></p>
+
+
+<p align="center">
+  <img width="628" height="475" alt="image" src="https://github.com/user-attachments/assets/9ae007a6-8f0f-4e0b-8a34-c659dda808b1" />
+</p>
+<p align="center"><b>Figure 6: AbuseIPDB lookup showing IP reputation, ASN (AS212238), and geolocation (Montreal, Canada)</b></p>
