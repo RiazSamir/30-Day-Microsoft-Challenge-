@@ -27,15 +27,15 @@ A user received a phishing email containing a typosquatted DocuSign link, entere
 
 ## Investigation Summary 
 
-On 2025-12-25 17:30 PM (UTC), an Incident was created for an Anonymous IP involving one user. A successful sign-in had been made from the IP address x[.]x[.]x[.]x on 2025-12-25 17:33 PM (UTC), into the user's (John Doe) Outlook Web (Figure 1). On 2025-12-25 17:20 PM (UTC), a Suspicious Invoice Email was sent to John Doe from the Gmail Address **abc@gmail.com** claiming that their "invoice is ready for viewing". This Email did have a URL attached (D0cusign[.]com) which the user had clicked on 2025-12-25 17:23 PM (UTC). Using URL2PNG for this link showed a login page, which is likely a credential harvester (Figure 2). Due to the structure of the URL in the email, typosquatting is occurring, meaning this Gmail address is imitating the legit site docusign.com and getting people to click on the link to login and possibly steal credentials. Based on the available evidence, a **30-day advanced hunting email search** showed that only John Doe received this email. (Figure 3). Furthermore, looking up this IP address on Abuse IPDB, this IP was reported 12 time with an abuse confidence of 0%. This IP Address was last reported 2 months ago for port scanning as well as brute forcing (Figure 6)
+On 2025-12-25 17:30 PM (UTC), an Incident was created for an Anonymous IP involving one user. A successful sign-in had been made from the IP address x[.]x[.]x[.]x on 2025-12-25 17:33 PM (UTC), into the user's (John Doe) Outlook Web (Figure 1). On 2025-12-25 17:20 PM (UTC), a Suspicious Invoice Email was sent to John Doe from the Gmail Address **abc@gmail.com** claiming that their "invoice is ready for viewing". This Email did have a URL attached (D0cusign[.]com) which the user had clicked on 2025-12-25 17:23 PM (UTC). Using URL2PNG for this link showed a login page, which is likely a credential harvester (Figure 2). Due to the structure of the URL in the email, typosquatting is occurring, meaning this Gmail address is imitating the legit site docusign.com and getting people to click on the link to log in and possibly steal credentials. Based on the available evidence, a **30-day advanced hunting email search** showed that only John Doe received this email. (Figure 3). Furthermore, looking up this IP address on Abuse IPDB, this IP address was reported 12 times with an abuse confidence of 0%. This IP Address was last reported 2 months ago for port scanning as well as brute forcing (Figure 6)
 
-On 2025-12-25 18:57 PM (UTC), an incident had been generated on Defender XDR for Credential Access on one Endpoint. The affected asset (soc-project-samir-vm-01) had executed Mimikatz.exe via PowerShell. This was done by the user John Doe. Mimikatz is a malicious program which is known for credential dumping. On 2025-12-25 18:56 PM - 2025-12-25 19:00 PM (UTC), the following commands were executed: 
+On 2025-12-25 18:57 PM (UTC), an incident was generated on Defender XDR for Credential Access on one Endpoint. The affected asset (soc-project-samir-vm-01) had executed Mimikatz.exe via PowerShell. This was done by the user John Doe. Mimikatz is a malicious program which is known for credential dumping. On 2025-12-25 18:56 PM - 2025-12-25 19:00 PM (UTC), the following commands were executed: 
 
 `sekurlsa::tickets`
 
 `sekurlsa::minidump` 
 
-which are both used to steal credentials as well as Kerberos tickets using mimikatz.exe. On  2025-12-25 18:43 PM (UTC), a successful login was made onto the endpoint soc-project-samir-vm-01 sourcing from the same IP x[.]x[.]x[.]x Figure 4. Based on the available evidence, no further sign-in activities or lateral movement activities have been observed (Figure 5). However, this is subject to change due to how recent this is. In this case, immediate action needs to be taken. 
+which are both used to steal credentials as well as Kerberos tickets using mimikatz.exe. On  2025-12-25 18:43 PM (UTC), a successful login was made onto the endpoint soc-project-samir-vm-01 sourcing from the same IP x[.]x[.]x[.]x however, the logon type was either unknown or unlock. It is possible that this was done through RDP however further investigation is required. What is certain that the logon was made by the same IP Address associated with the OWA sign-in. (Figure 4). Based on the available evidence, no further sign-in activities or lateral movement activities have been observed (Figure 5). However, this is subject to change due to how recent this is. In this case, immediate action needs to be taken. 
 
 ## Who, What, When, Where, Why 
 
@@ -126,7 +126,7 @@ which are both used to steal credentials as well as Kerberos tickets using mimik
 
 
 <p align="center">
-  <img width="1087" height="27" alt="image" src="https://github.com/user-attachments/assets/dfda8759-ad9b-49ca-8477-b0b60514ce05" />
+  <img width="1218" height="175" alt="image" src="https://github.com/user-attachments/assets/57043af9-c063-4fd9-afbd-9aed3c20e0e8" />
 </p>
 <p align="center"><b>Figure 4: Successful endpoint login to soc-project-samir-vm-01 from the same suspicious external IP address used in the earlier OWA compromise</b></p>
 
